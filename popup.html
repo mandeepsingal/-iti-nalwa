@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation Popup</title>
+  <script>
+    function confirmSubmit() {
+      // Show confirmation popup
+      const confirmation = confirm("Are you sure you want to submit?");
+      
+      // If the user clicks 'OK', submit the form
+      if (confirmation) {
+        document.getElementById("myForm").submit();
+      } else {
+        // If 'Cancel' is clicked, do nothing
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <form id="myForm" action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <br><br>
+
+    <button type="button" onclick="confirmSubmit()">Submit</button>
+  </form>
+
+</body>
+</html>

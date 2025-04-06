@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITI Admission Form</title>
+    <style>
+	
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: grey;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        .form-container {
+            background-color: orange;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+        }
+        .form-container label {
+            font-size: 16px;
+            margin-top: 10px;
+            display: block;
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: left-side;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .file-upload {
+            margin-top: 10px;
+        }
+        .file-upload input[type="file"] {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .captcha {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+
+    <h1>ITI Admission Form</h1>
+
+    <div class="form-container">
+        <form action="#" method="POST" enctype="multipart/form-data">
+            
+            <!-- Personal Information Section -->
+            <h2>Personal Information</h2>
+            
+
+
+ <label for="full- Name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+			
+			
+			
+			
+			<br><br>
+
+    <label for="fatherName">Father's Name:</label>
+    <input type="text" id="fatherName" name="fatherName" required>
+    
+    <br><br>
+
+    <label for="motherName">Mother's Name:</label>
+    <input type="text" id="motherName" name="motherName" required>
+    
+    <br><br>
+
+    <label for="maritalStatus">Marital Status:</label>
+    <select id="maritalStatus" name="maritalStatus" required>
+      <option value="single">Single</option>
+      <option value="married">Married</option>
+      <option value="divorced">Divorced</option>
+      <option value="widowed">Widowed</option>
+    </select>
+    
+
+
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+			
+			
+			 <br><br>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="india">India</option>
+    </select>
+    
+    <br><br>
+
+    <label for="state">State:</label>
+    <select id="state" name="state" required onchange="updateDistricts()">
+      <option value="haryana">Haryana</option>
+    </select>
+    
+    <br><br>
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Select Dropdown</title>
+</head>
+<body>
+
+
+  <form>
+    <label for="fruit">Choose your district:</label>
+    <select id="district" name="district">
+      <option value="apple">Bhiwani</option>
+      <option value="banana">Hisar</option>
+      <option value="orange">Jind</option>
+      <option value="mango">karnal</option>
+    </select>
+    
+	
+    
+    <br><br>
+
+    <label for="tehsil">Tehsil:</label>
+    <select id="tehsil" name="tehsil" required onchange="updateVillages()">
+      <!-- Tehsil options will be populated based on selected district -->
+    </select>
+    
+    <br><br>
+
+    <label for="village">Village:</label>
+    <select id="village" name="village" required>
+      <!-- Village options will be populated based on selected tehsil -->
+    </select>
+    
+    <br><br>
+    <br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Trade Selection Section -->
+            <h2>Trade Selection</h2>
+            <label for="trade">Select Trade:</label>
+            <select id="trade" name="trade" required>
+                <option value="electrician">Electrician</option>
+                <option value="fitter">Fitter</option>
+                <option value="cop">Computer Operator and Programming Assistant</option>
+                <option value="plumber">Plumber</option>
+                <option value="welder">Welder</option>
+                <option value="mechanic_motor_vehicle">Mechanic (Motor Vehicle)</option>
+                <option value="draftsman_civil">Draftsman (Civil)</option>
+                <option value="turner">Turner</option>
+                <option value="machinist">Machinist</option>
+                <option value="refrigeration_ac_mechanic">Refrigeration and Air Conditioning Mechanic</option>
+                <option value="wireman">Wireman</option>
+                <option value="diesel_mechanic">Diesel Mechanic</option>
+                <option value="architectural_draughtsman">Architectural Draughtsman</option>
+                <option value="beauty_wellness">Beauty & Wellness</option>
+                <option value="health_sanitary_inspector">Health Sanitary Inspector</option>
+                <option value="motor_driving">Motor Driving</option>
+                <option value="fashion_designing">Fashion Designing</option>
+                <option value="hand_compositor">Hand Compositor</option>
+                <option value="instrument_mechanic">Instrument Mechanic</option>
+                <option value="it_software_applications">IT Software (Applications)</option>
+                <option value="solar_technician">Solar Technician</option>
+                <option value="medical_lab_technician">Medical Lab Technician</option>
+                <option value="fire_safety">Fire Safety</option>
+                <option value="hotel_management">Hotel Management</option>
+                <option value="airline_ground_staff">Airline Ground Staff</option>
+                <option value="electronics_technician">Electronics Technician</option>
+                <option value="plumber_specialized">Specialized Plumbing</option>
+            </select>
+
+            <!-- Required Documents Section -->
+            <h2>Required Documents</h2>
+            <div class="file-upload">
+                <label for="id-proof">Upload ID Proof (Aadhar/Passport/Driver's License):</label>
+                <input type="file" id="id-proof" name="id-proof" accept="image/*, .pdf" required>
+            </div>
+            <div class="file-upload">
+                <label for="qualification-certificate">Upload Qualification Certificate:</label>
+                <input type="file" id="qualification-certificate" name="qualification-certificate" accept="image/*, .pdf" required>
+            </div>
+            <div class="file-upload">
+                <label for="passport-size-photo">Upload Passport Size Photo:</label>
+                <input type="file" id="passport-size-photo" name="passport-size-photo" accept="image/*" required>
+            </div>
+
+  <div class="file-upload">
+                <label for="signature">Upload signature:</label>
+                <input type="file" id="signature" name="signature" accept="image/*" required>
+            </div>
+
+            </div>
+
+            <!-- Terms and Conditions Section -->
+            <h2>Terms and Conditions</h2>
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the <a href="#">terms and conditions</a>.
+            </label>
+			
+			
+
+           <!DOCTYPE html>
+		   
+		   
+		   
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation Popup</title>
+  <script>
+    function confirmSubmit() {
+      // Show confirmation popup
+      const confirmation = confirm("Are you sure you want to submit?");
+      
+      // If the user clicks 'OK', submit the form
+      if (confirmation) {
+        document.getElementById("myForm").submit();
+      } else {
+        // If 'Cancel' is clicked, do nothing
+        return false;
+      }
+    }
+  </script>
+</head>
+
+    <br><br>
+
+    <button type="button" onclick="confirmSubmit()">Submit</button>
+  </form>
+  
+  
+ 
+
+</body>
+</html>
+
+    </div>
+
+</body>
+</html>

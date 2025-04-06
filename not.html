@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITI Open Notice Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .notice-board {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .notice {
+            background-color: #e7f7e7;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .notice h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .notice-content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f4f4f9;
+            border-radius: 5px;
+        }
+        .notice.open .notice-content {
+            display: block;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ITI Open Notice Board</h1>
+        <p>Click on each notice to view more details</p>
+    </header>
+
+    <div class="container">
+        <!-- Notice Board -->
+        <div class="notice-board">
+            <h2>Important Notices</h2>
+
+            <!-- Notice 1 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 1: Registration Deadline</h3>
+                <div class="notice-content">
+                    <p>All students are required to complete the registration for upcoming courses by 10th May. Please ensure to submit your forms before the deadline.</p>
+                    <footer>Posted on: 1st April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 2 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 2: Apprenticeship Training Opportunity</h3>
+                <div class="notice-content">
+                    <p>Apprenticeship training applications are now open. Interested candidates should submit their applications to the Training Officer by 15th April 2025.</p>
+                    <footer>Posted on: 3rd April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 3 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 3: Annual Sports Day</h3>
+                <div class="notice-content">
+                    <p>The Annual Sports Day for all ITI students will be held on 20th April 2025. Students are encouraged to participate in various events.</p>
+                    <footer>Posted on: 2nd April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 4 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 4: Exam Schedule</h3>
+                <div class="notice-content">
+                    <p>The exam schedule for the final year students will be announced on 5th April 2025. Please stay updated by checking the notice board.</p>
+                    <footer>Posted on: 4th April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 5 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 5: Fee Payment Reminder</h3>
+                <div class="notice-content">
+                    <p>Students are reminded to pay their semester fees by 15th April 2025 to avoid late fees. Payments can be made online or at the finance department.</p>
+                    <footer>Posted on: 3rd April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 6 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 6: New Faculty Member</h3>
+                <div class="notice-content">
+                    <p>We are pleased to announce that Mr. Rajesh Kumar has joined as a new instructor for the Electrical Engineering department. Please welcome him to the ITI family.</p>
+                    <footer>Posted on: 2nd April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 7 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 7: Library Timings</h3>
+                <div class="notice-content">
+                    <p>The library will be open from 9:00 AM to 5:00 PM during the holiday week. Students are encouraged to utilize the library for reference materials.</p>
+                    <footer>Posted on: 1st April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 8 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 8: IT Lab Maintenance</h3>
+                <div class="notice-content">
+                    <p>There will be scheduled maintenance for the IT Lab on 12th April 2025. The lab will remain closed for the entire day. Please plan accordingly.</p>
+                    <footer>Posted on: 4th April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 9 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 9: Placement Drive</h3>
+                <div class="notice-content">
+                    <p>A placement drive for all final-year students will be held on 25th April 2025. Interested students should register by 18th April 2025.</p>
+                    <footer>Posted on: 2nd April 2025</footer>
+                </div>
+            </div>
+
+            <!-- Notice 10 -->
+            <div class="notice" onclick="toggleNotice(this)">
+                <h3>Notice 10: Cultural Event</h3>
+                <div class="notice-content">
+                    <p>Join us for the ITI Annual Cultural Event on 30th April 2025. Students are invited to perform in music, dance, and drama competitions.</p>
+                    <footer>Posted on: 5th April 2025</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function toggleNotice(notice) {
+            notice.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
